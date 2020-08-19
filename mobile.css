@@ -1,7 +1,7 @@
 /* Media Queries*/
 @media screen and (max-width: 1000px){
 
-nav{
+.navbar__menu-items {
     display: none;
 }
 
@@ -11,7 +11,7 @@ nav{
 }
 
 .hero__benefit {
-flex-direction: column;
+display: none;
   }
 
 
