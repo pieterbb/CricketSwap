@@ -23,8 +23,13 @@ flex-direction: column;
     width: 80%;
 }
 .events__container{
-    width: 90vw;
+    width: 100vw;
 }
+
+
+.events__search-title h2 {
+    margin-bottom: 0rem;
+  }
 
 footer{
     display:none;
