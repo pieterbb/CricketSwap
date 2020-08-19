@@ -18,16 +18,16 @@ display: none;
     font-size: 2rem;
   }
 
- .hero__benefit i {
-    padding-bottom: .5rem;
+ .hero__benefit {
+    display: none;
   }
 
 .hero__searchbox{
     width: 80%;
 }
 .events__container{
-    width: 100vw;
-    padding: .25rem;
+    width: 95vw;
+
 }
 
 .events__search-title h2 {
