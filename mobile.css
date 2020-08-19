@@ -15,6 +15,10 @@ flex-direction: column;
   }
 
 
+ .hero__benefit i {
+    padding-bottom: .5rem;
+  }
+
 .hero__searchbox{
     width: 80%;
 }
