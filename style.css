@@ -1,0 +1,480 @@
+/* Variables */
+
+:root {
+  --primary-font-color: #fff;
+  --secondary-font-color: #99a1a3;
+  --highlight-font-color: #00b6f0;
+  --card-background-color: rgb(245, 245, 246);
+  --card-title-font-color: #001319;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styling */
+body {
+  font-family: "proxima-nova", sans-serif;
+  /* text-shadow: 0 1px 0 rgba(0,19,25,0.1); */
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-font-color);
+}
+
+/* Utilities */
+.icon-color-orange {
+  background-color: #ffa600;
+}
+
+.icon-color-green {
+  background-color: #00ce5c;
+}
+
+.icon-color-grey {
+  background-color: #667175;
+}
+
+/* Sections */
+
+/* Navbar */
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar__container {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo-image img {
+  height: 70px;
+  cursor: pointer;
+}
+
+.navbar__menu-items ul {
+  display: flex;
+}
+
+.navbar__menu-items ul li {
+  padding: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.navbar__cta-btn {
+  padding: 1rem 1.4rem;
+  font-size: 1rem;
+  background-color: rgb(0, 206, 92);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0)
+  );
+  border-radius: 10px;
+  text-shadow: 0 1px 0 rgba(0, 19, 25, 0.1);
+  transition: all 0.05s;
+}
+
+.navbar__cta-btn:hover {
+  background: rgb(51, 216, 125);
+}
+
+/* Hero */
+
+.hero {
+  height: 60vh;
+  background: url("img/hero.jpg") no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 19, 25, 1) 30%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 90vw;
+  margin: auto;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero__headline h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-font-color);
+  text-shadow: 0 1px 0 rgba(0, 19, 25, 0.1);
+  z-index: 10;
+  margin-bottom: 2rem;
+}
+
+.hero__searchbox {
+  padding: 1rem;
+  background: #fff;
+  width: 700px;
+  border-radius: 5px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.hero__searchbox i {
+  color: var(--secondary-font-color);
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  position: ;
+}
+
+.hero__searchbox input {
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.hero__searchbox input:focus ~ .hero__searchbox-dropdown {
+  display: block;
+}
+
+.hero__searchbox-dropdown {
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 380px;
+  width: 100%;
+  position: absolute;
+  top: calc(100% + 0.25rem);
+  left: 0px;
+  box-shadow: rgba(0, 19, 25, 0.2) 0px 1px 2px, rgba(0, 19, 25, 0.1) 0px 4px;
+}
+
+.hero__dropdown-title {
+  display: flex;
+  padding: 1rem;
+}
+
+.hero__dropdown-title h2 {
+  color: var(--secondary-font-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.hero__dropdown-event {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.hero__dropdown-event-icon {
+  display: flex;
+}
+
+.hero__dropdown-event-icon i {
+  font-size: 1rem;
+  color: var(--highlight-font-color);
+}
+
+.hero__dropdown-event-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero__dropdown-event-info h3 {
+  color: var(--highlight-font-color);
+  font-weight: 400;
+  margin-bottom: .25rem;
+}
+
+.hero__dropdown-event-info p {
+  color: var(--secondary-font-color);
+}
+
+.hero__benefits-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--primary-font-color);
+  width: 700px;
+  margin-bottom: 3rem;
+}
+
+.hero__benefit {
+  display: flex;
+  padding: 1rem 0;
+  width: calc(33.333% - 2rem);
+}
+
+/* Event Discover Section */
+
+.events {
+  width: 100%;
+  margin: auto;
+}
+
+.events__container {
+  padding: 2rem;
+  width: 60vw;
+  margin: auto;
+}
+
+.events__search-block{
+  margin-bottom: 4rem;
+}
+
+.events__search-title h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.events__search-card-icon {
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.events__search-card-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.events__search-card {
+  display: flex;
+  align-items: center;
+  background: var(--card-background-color);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.events__search-card-info {
+}
+
+.events__search-card-info h2 {
+  color: var(--card-title-font-color);
+  font-size: 1.2rem;
+}
+
+.events__search-card-info p {
+  font-size: 1rem;
+  color: var(--secondary-font-color);
+}
+
+/* Events Discover Cards */
+.events__discover-card {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 19, 25, 0.2) 0px 1px 2px, rgba(0, 19, 25, 0.1) 0px 4px 12px;
+}
+
+.events__discover-hero {
+  background: url("img/cricket-stadium.jpg") no-repeat center center/cover;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+.events__discover-card{
+  margin-bottom: 4rem;
+}
+
+.events__discover-hero-2 {
+  background: url("img/cricket-2.jpg") no-repeat center center/cover;
+}
+
+
+.events__discover-hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 19, 25, 1) 5%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.events__hero-title{
+  padding: 1rem;
+}
+
+.events__hero-title h2,
+.events__hero-title p {
+  color: var(--primary-font-color);
+  margin-top: .25rem;
+}
+
+
+/* Events Card Items */
+
+.events__card-items{
+  display: flex;
+  flex-direction: column;
+}
+
+.events__card-item{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(229, 231, 232);
+  padding: 1rem;
+}
+
+.events__card-item-left{
+  display: flex;
+}
+
+.events__calendar-icon{
+  border-radius: 5px;
+  display: flex;
+  flex-shrink: 0;
+  min-width: 40px;
+  max-height: 45px;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px, rgba(0, 0, 0, 0.1) 0px 0px 2px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.events__calendar-month{
+  background: #F14645;
+  padding: .25rem .5rem;
+  color: var(--primary-font-color);
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.events__calendar-day{
+  padding: .25rem .5rem;
+  font-weight: bold;
+}
+
+.events__event-title{
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.events__event-title p{
+  color: rgb(102, 113, 117)
+}
+
+.events__card-item-right{
+  display: flex;
+  align-items: center;
+}
+
+.events__ticket-icon{
+  display:flex;
+  justify-content: center;
+  align-items: baseline;
+  background: var(--highlight-font-color);
+  color: #FFF;
+  font-size: .8rem;
+  font-weight: bold;
+  padding: .25rem .75rem;
+  border-radius: 1rem;
+}
+
+
+.events__see-more-btn{
+  background: #F2FBFE;
+  color: var(--highlight-font-color);
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem;
+  text-align: center;
+  transition: all ease .25s;
+  cursor: pointer;
+}
+
+.events__see-more-btn:hover{
+  background: #E5F7FD;
+}
+
+
+/* Footer Styling */
+
+footer{
+  border-top: 1px solid #E5E7E8;
+}
+
+.footer__container{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+
+}
+.footer__column{
+  margin: 0 4rem ;
+}
+
+.footer__links{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.footer__column ul li{
+padding: .35rem 0;
+color: rgb(102,113,117);
+font-size: 1.2rem;
+}
+
+.footer__column i{
+margin-right: .25rem;
+}
+
+.footer__title{
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
