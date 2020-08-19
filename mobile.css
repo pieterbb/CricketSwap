@@ -1,5 +1,5 @@
 /* Media Queries*/
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 800px){
 
 .navbar__menu-items {
     display: none;
@@ -16,6 +16,7 @@ display: none;
 
   .hero__headline h1 {
     font-size: 2rem;
+  }
 
  .hero__benefit i {
     padding-bottom: .5rem;
