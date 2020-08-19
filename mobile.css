@@ -14,6 +14,8 @@
 display: none;
   }
 
+  .hero__headline h1 {
+    font-size: 2rem;
 
  .hero__benefit i {
     padding-bottom: .5rem;
@@ -24,7 +26,7 @@ display: none;
 }
 .events__container{
     width: 100vw;
-    padding: 0rem;
+    padding: .25rem;
 }
 
 .events__search-title h2 {
