@@ -308,7 +308,7 @@ nav {
   min-height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   border-radius: 10px;
   z-index: 1;
   position: relative;
