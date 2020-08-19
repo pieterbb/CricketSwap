@@ -1,14 +1,19 @@
 /* Media Queries*/
 @media screen and (max-width: 1000px){
 
-.navbar__menu-items ul li{
+nav{
     display: none;
 }
 
 .hero__benefits-container{
     flex-direction: column;
-    width: 50vw;
+    width: 90vw;
 }
+
+.hero__benefit {
+flex-direction: column;
+  }
+
 
 .hero__searchbox{
     width: 80%;
